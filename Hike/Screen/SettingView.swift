@@ -65,7 +65,35 @@ struct SettingView: View {
             // MARK: SECTION - ICONS
 
             // MARK: SECTION - ABOUT
-
+        Section(
+            header: Text("About the app"),
+            footer: HStack{
+                Spacer()
+                Text("Todos os direitos reservados")
+                Spacer()
+            }
+                .padding(.vertical, 8)
+        ){
+            //MARK: BASIC LABELED CONTENT
+//            LabeledContent("Aplicativo", value: "Trilha")
+            
+            //MARK: ADVANCED LABELED CONTENT
+            CustomListRowView(rowLabel: "Aplicativo", rowIcon: "apps.iphone", rowContent: "Trilha", rowTintColor: .blue)
+            
+            CustomListRowView(rowLabel: "Compatibilidade", rowIcon: "info.circle", rowContent: "iOS, iPad", rowTintColor: .red)
+            
+            CustomListRowView(rowLabel: "Tecnologia", rowIcon: "swift", rowContent: "SwiftUI", rowTintColor: .orange)
+            
+            CustomListRowView(rowLabel: "Versão", rowIcon: "gear", rowContent: "1.0.0", rowTintColor: .purple)
+            
+            CustomListRowView(rowLabel: "Desenvolvedor", rowIcon: "ellipsis.curlybraces", rowContent: "Rafael Franco", rowTintColor: .mint)
+            
+            CustomListRowView(rowLabel: "Designer", rowIcon: "paintpalette", rowContent: "Flávia Franco", rowTintColor: .pink)
+            
+            CustomListRowView(rowLabel: "Web", rowIcon: "globe", rowTintColor:  .indigo, rowlinkLabel: "Franco Programador", rowlinkDestination: "https://francoprogramador.com.br")
+            
+            
+        }//: SECTION
         }  //: LIST
     }
 }
