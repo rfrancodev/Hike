@@ -12,6 +12,7 @@ struct CardsView: View {
     //MARK: - PROPETIES
     @State private var imageNumber: Int = 1
     @State private var randomNumber: Int = 1
+    @State private var isShowingSheet: Bool = false
     
     //MARK: - FUNCTION
     //MARK: DEBUG - Testing functionaries of buttom
@@ -56,8 +57,14 @@ struct CardsView: View {
                         Button{
                             // ACTION: Mostrar uma planilha
 //                            print("Botao foi pressionado")
+                            isShowingSheet.toggle()
                         } label: {
                             CustomButtonView()
+                        }
+                        .sheet(isPresented: $isShowingSheet){
+                            SettingView()
+                                .presentationDragIndicator(.visible)
+                                .presentationDetents([.medium, .large])
                         }
                     }
                     
@@ -81,6 +88,7 @@ struct CardsView: View {
                 Button{
                 // ACTION: - Pressionar o botao
                     print("O botao Explorar foi pressionado")
+                    
                     randomImage()
                 } label: {
                     Text("Explorar Mais")
