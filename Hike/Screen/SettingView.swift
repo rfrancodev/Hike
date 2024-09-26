@@ -26,18 +26,18 @@ struct SettingView: View {
             Section {
                 HStack {
                     Spacer()
-                    Image(systemName: "laurel.leading")
-                        .font(.system(size: 72, weight: .black))
+                    Image(systemName: "medal.fill")
+                        .font(.system(size: 42, weight: .black))
 
                     VStack(spacing: -10) {
                         Text("Trilha")
                             .font(.system(size: 64, weight: .black))
-                        Text("Editor Choice")
+                        Text("Modo Aventureiro")
                             .fontWeight(.medium)
                     }
 
-                    Image(systemName: "laurel.trailing")
-                        .font(.system(size: 72, weight: .black))
+                    Image(systemName: "medal.fill")
+                        .font(.system(size: 42, weight: .black))
                     Spacer()
                 }
                 .foregroundStyle(
